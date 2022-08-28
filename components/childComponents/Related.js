@@ -1,12 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import Author from "./childComponents/Author"
+import Author from "./Author"
 
-function CategoriesSection() {
+function Related() {
     return (
         <section className="container mx-auto md:px-20 py-16">
-            <div className="grid lg:grid-cols-2 md:grid-cols-1">
-                {Category()}
+            <div className="grid md:grid-cols-1">
                 {Category()}
             </div>
         </section>
@@ -17,7 +16,7 @@ function CategoriesSection() {
 function Category() {
     return (
         <div className="item">
-            <h1 className="font-bold text-4xl pb-12 text-left capitalize">Technology</h1>
+            <h1 className="font-bold text-4xl pb-12 text-left capitalize">Related</h1>
             <div className="flex flex-col gap-6">
                 {Post()}
                 {Post()}
@@ -60,4 +59,4 @@ function Post() {
     )
 }
 
-export default CategoriesSection
+export default Related

@@ -10,3 +10,26 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  margin-block: 2px;
+  border-radius: 8px;
+  background: #e1e1e1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

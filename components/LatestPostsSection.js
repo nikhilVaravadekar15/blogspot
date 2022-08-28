@@ -3,8 +3,9 @@ import Link from "next/link"
 import Author from "./childComponents/Author"
 
 function LatestPostsSection() {
+
     return (
-        <section className="container mx-auto md:px-20 py-10">
+        <section className="container mx-auto md:px-16 py-10 sm:px-4">
             <h1 className="text-4xl font-bold py-12 text-center capitalize">Latest Posts</h1>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12">
                 {Post()}
