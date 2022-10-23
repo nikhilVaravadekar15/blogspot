@@ -1,14 +1,33 @@
 import Image from "next/image"
 import Link from "next/link"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from "swiper"
+// Import Swiper styles
+import 'swiper/css';
 import Author from "./childComponents/Author"
 
 function CategoriesSection() {
+    SwiperCore.use([Autoplay])
     return (
         <section className="container mx-auto md:px-20 py-16">
-            <div className="grid lg:grid-cols-2 md:grid-cols-1">
-                {Category()}
-                {Category()}
-            </div>
+            <Swiper
+                spaceBetween={32}
+                breakpoints={{
+                    768: { slidesPerView: 2 },
+                    640: { slidesPerView: 1 }
+                }}
+                loop={true}
+                autoplay={{
+                    delay: 8000
+                }}
+            >
+                <SwiperSlide>{Category()}</SwiperSlide>
+                <SwiperSlide>{Category()}</SwiperSlide>
+                <SwiperSlide>{Category()}</SwiperSlide>
+                <SwiperSlide>{Category()}</SwiperSlide>
+                <SwiperSlide>{Category()}</SwiperSlide>
+            </Swiper>
         </section>
     )
 }
@@ -16,7 +35,7 @@ function CategoriesSection() {
 
 function Category() {
     return (
-        <div className="item">
+        <div className="item px-4">
             <h1 className="font-bold text-4xl pb-12 text-left capitalize">Technology</h1>
             <div className="flex flex-col gap-6">
                 {Post()}

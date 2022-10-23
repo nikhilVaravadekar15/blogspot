@@ -1,33 +1,49 @@
 import Image from "next/image"
 import Link from "next/link"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from "swiper"
+// Import Swiper styles
+import 'swiper/css';
 import Author from "./childComponents/Author"
 
 function LatestPostsSection() {
-
+    SwiperCore.use([Autoplay])
     return (
-        <section className="container mx-auto md:px-16 py-10 sm:px-4">
-            <h1 className="text-4xl font-bold py-12 text-center capitalize">Latest Posts</h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12">
-                {Post()}
-                {Post()}
-                {Post()}
-                {Post()}
-                {Post()}
-                {Post()}
+        <section className="py-16 sm:bg-left-bottom sm:bg-contain" style={{
+            background: "url('/images/banner.png') no-repeat 104% 50%",
+            backgroundPosiont: "right"
+        }}>
+            <div className="container mx-auto md:px-20">
+                <h1 className="font-bold text-4xl pb-12 text-center capitalize">Latest Posts</h1>
             </div>
+            <Swiper
+                spaceBetween={48}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 8000
+                }}
+            >
+                <SwiperSlide>{slide()}</SwiperSlide>
+                <SwiperSlide>{slide()}</SwiperSlide>
+                <SwiperSlide>{slide()}</SwiperSlide>
+                <SwiperSlide>{slide()}</SwiperSlide>
+                <SwiperSlide>{slide()}</SwiperSlide>
+            </Swiper>
         </section>
     )
 }
 
-function Post() {
+function slide() {
     return (
-        <div className="item">
-            <div className="images">
+        <div className="grid md:grid-cols-2 justify-items-center sm:grid-cols-1">
+            <div className="image justify-center">
                 <Link href={"/"}>
-                    <Image src={"/images/img1.jpg"} alt="" width={500} height={350} className="rounded cursor-pointer" />
+                    <Image src={"/images/img1.jpg"} className="cursor-pointer" alt="" width={"600"} height={"600"} />
                 </Link>
             </div>
-            <div className="info flex justify-center flex-col">
+            <div className="info flex justify-center flex-col w-3/4 mr-12 sm:mt-6">
                 <div className="categories">
                     <Link href={"/"}>
                         <a className="text-orange-600 hover:text-orange-800" title="Business, Travel">Business, Travel</a>
@@ -38,7 +54,7 @@ function Post() {
                 </div>
                 <div className="title">
                     <Link href={"/"}>
-                        <a className="text-xl md:text-2xl font-bold text-gray-800 hover:text-gray-600">
+                        <a className="text-3xl md:text-5xl font-bold text-gray-800 hover:text-gray-600">
                             Your most unhappy customers are your greatest source of learning.
                         </a>
                     </Link>
