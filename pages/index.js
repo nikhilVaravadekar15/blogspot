@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import Format from '../layout/Format'
 import TrendingSection from '../components/TrendingSection'
 import LatestPostsSection from '../components/LatestPostsSection'

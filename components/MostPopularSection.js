@@ -11,7 +11,7 @@ function MostPopularSection() {
     SwiperCore.use([Autoplay])
 
     return (
-        <section className="container mx-auto md:mx-20 py-16">
+        <section className="container mx-auto py-16">
             <div className="">
                 <h1 className="font-bold text-4xl pb-12 text-center capitalize">Most Popular</h1>
             </div>
@@ -19,7 +19,7 @@ function MostPopularSection() {
                 spaceBetween={32}
                 breakpoints={{
                     768: { slidesPerView: 2 },
-                    640: { slidesPerView: 1 },
+                    640: { slidesPerView: 1 }
                 }}
                 autoplay={{
                     delay: 8000
