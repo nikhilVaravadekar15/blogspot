@@ -5,9 +5,8 @@ import Author from "./childComponents/Author"
 function AllPostsSection() {
 
     return (
-        <section className="container mx-auto md:px-16 py-10 sm:px-4">
-            <h1 className="text-4xl font-bold py-12 text-center capitalize">All Posts</h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12">
+        <section className="container mx-auto md:px-6 py-8 sm:px-4 ">
+            <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6">
                 {Post()}
                 {Post()}
                 {Post()}
