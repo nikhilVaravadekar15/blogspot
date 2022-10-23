@@ -7,6 +7,14 @@ function Footer() {
   return (
     <footer className="bg-gray-50">
       <NewsLatter></NewsLatter>
+      <div className="container mx-auto w-1/6 flex justify-between items-center flex-row">
+        <Link href={"#latest-posts"}>
+          <h2 className="font-semibold text-lg p-2 cursor-pointer">Start Reading</h2>
+        </Link>
+        <Link href={"/"}>
+          <h2 className="font-semibold text-lg p-2 cursor-pointer">Start Writing</h2>
+        </Link>
+      </div>
       <div className="container mx-auto flex justify-center py-12 " style={{
         background: "url('/images/footer.png') no-repeat",
         backgroundRepeat: "no-repeat",

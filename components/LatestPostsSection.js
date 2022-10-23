@@ -10,10 +10,12 @@ import Author from "./childComponents/Author"
 function LatestPostsSection() {
     SwiperCore.use([Autoplay])
     return (
-        <section className="py-16 sm:bg-left-bottom sm:bg-contain" style={{
-            background: "url('/images/banner.png') no-repeat 104% 50%",
-            backgroundPosiont: "right"
-        }}>
+        <section className="py-16 sm:bg-left-bottom sm:bg-contain"
+            id="latest-posts"
+            style={{
+                background: "url('/images/banner.png') no-repeat 104% 50%",
+                backgroundPosiont: "right"
+            }}>
             <div className="container mx-auto md:px-20">
                 <h1 className="font-bold text-4xl pb-12 text-center capitalize">Latest Posts</h1>
             </div>
